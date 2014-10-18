@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <title>Presentation</title>
+
+    <meta charset='utf-8'>
+    <script src='js/slides.js'></script>
+    <script src='js/slide-resize.js'></script>
+  </head>
+
+  <style>
+    /* Your individual styles here, or just use inline styles if that’s what you want. */
+  </style>
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+      <!-- Your slides (<article>s) go here. Delete or comment out the slides below. -->
+
+      <article class='biglogo'></article>
+
+      
+<article>
+<h3>総合システムネットワーク講習会</h3>
+<p>総シスネットワークは夏休み頃から不調が目立つ。</p>
+<h4>目的</h4>
+<ul>
+<li>卒論シーズンを迎え、問題点をクリアする。</li>
+<li>不調の原因を作らないよう、最低限を覚える。</li>
+<li><a href="lists.cgi">責任者メールリスト</a>の作成。</li>
+</ul>
+<p>この資料のアドレスは <a href="http://some.where">どこかに</a> です。</p>
+</article>
+
+<article>
+<h3>知っておくべきこと</h3>
+<ul>
+<li>九工大ネットワークは脆弱。</li>
+<li>一研究室のケアレスミスがサブネット全体のネットワークに影響する。</li>
+<li>デフォルトでつなぐと良くないことが起こる。</li>
+</ul>
+</article>
+
+<article>
+<h3>何が不調か？</h3>
+<ul>
+<li>メールの送受信に時間がかかる。</li>
+<li>ファイル転送が遅い。</li>
+<li>リモートログインしての作業がとぎれとぎれ。</li>
+<li>丸腰の Windows がネットワーク上に見える。</li>
+</ul>
+<pre>
+dhcp30.mns.kyutech.ac.jp (150.69.84.30) at 00:0a:79:60:f5:f3 [ether] on eth0
+dhcp37.mns.kyutech.ac.jp (150.69.84.37) at 00:3a:9d:20:ff:59 [ether] on eth0
+dhcp35.mns.kyutech.ac.jp (150.69.84.35) at 20:c9:d0:2a:c2:6b [ether] on eth0
+dhcp24.mns.kyutech.ac.jp (150.69.84.24) at 10:6f:3f:fc:b5:df [ether] on eth0
+</pre>
+
+</article>
+
+<article>
+<h3>こんなことはない</h3>
+<p>前スライドの<span class='warn'>「丸腰 PC」</span>を除いて、</p>
+<ul>
+<li>パスワードやデータが漏れることはない。</li>
+<li>PCのデータが消えることはない。</li>
+<li>PCが知らない間に遠隔操作されることはない。</li>
+</ul>
+<p>ただし、きちんとルータ下に収まった PC でも、
+USBスティックやメールでウィルスを持ち込んでしまうことはある。
+そんなのは別。守れない。</p>
+<p>研究活動以外、YouTube や楽曲の違法ダウンロードでウィルス食らったやつは
+<span class='warn'>自分で責任とれ</span>。</p>
+</article>
+
+<article>
+<h3>原因</h3>
+<p>研究室PCがウィルスに感染していないとしても、気になる点がいくつか。</p>
+<ul>
+<li><span class='warn'>ケーブルの扱い</span>が雑。</li>
+<li>ルータ、ハブの役割を理解していない。</li>
+<li>ルータの設定を確認していない。九工大ネットはデフォルト値の使用を<span class='warn'>許していない</span>。</li>
+<li>無線 AP にパスワード設定していない。</li>
+<li>部屋が汚い。</li>
+</ul>
+</article>
+
+<article>
+<h3>ケーブル</h3>
+<ul>
+<li>きちんとしたケーブルを使わないと通信は安定しない。</li>
+</ul>
+<p><a href="images/good_cable.jpg">good cable</a></p>
+<ul>
+<li>きちんとしたケーブルは外被がプラグにきちっと押さえられている。</li>
+</ul>
+<p><a href="images/no_cover.jpg">bad cable 1</a></p>
+<ul>
+<li>きちんとしたケーブルはラッチが折れていない。差し込むと「カチっ」とはまり、少々引いても抜けない。</li>
+</ul>
+<p><a href="images/no_ratch.jpg">bad cable 2</a></p>
+</article>
+
+<article>
+<h3>ルータ・ハブ</h3>
+<p>同じ箱に見えるが、役割はまったく違う。</p>
+<p><img src="images/router_hub.jpg" style="width:70%;"></p>
+
+</article>
+
+<article>
+<h3>ルータは上下を区別する</h3>
+<p><img src="images/router_role.png" style="width:50%;"></p>
+
+</article>
+
+<article>
+<h3>ハブは上下の区別なし</h3>
+<p><img src="images/hub_role.png" style="width:50%;"></p>
+
+</article>
+
+<article>
+<h3>正：壁面からのケーブルにルータ、ルータとPCの間にハブ</h3>
+<p><img src="images/router_hub.png" style="width:50%;"></p>
+
+</article>
+
+<article>
+<h3>間違い：ハブがルータよりも上流にある</h3>
+<p>ルータとハブの場所が逆。守られているつもりで晒される PC。</p>
+<p><img src="images/hub_router.png" style="width:50%;"></p>
+
+</article>
+
+<article>
+<h3>ルータの向きを逆にすると他研究室も止める</h3>
+<p>ルータの向きが逆。</p>
+<ul>
+<li>自分研究室のPCがネットにつながらない。</li>
+<li>研究室のルータに間違いアドレスを提供してしまう。食らった研究室は全滅。</li>
+</ul>
+<p><img src="images/reverse_router.png" style="width:86%;"></p>
+
+</article>
+
+<article>
+<h3>九工大ネットは IPv6 が嫌い</h3>
+<ul>
+<li>デフォルトで
+<span class='warn'>IPv6 ブリッジ</span>
+の設定が生きているルータがある。設定を外すこと。</li>
+<li>デフォルトで Windows7 は <span class='warn'>IPv6 がイネーブル</span>されている。
+設定を外すこと。</li>
+<li>九工大ネットワークは IPv6 が嫌いだ。</li>
+</ul>
+<p><img src="images/ipv6_bridge.png" style="width:86%;"></p>
+
+<p>設定が確認できないときはつなぐな。</p>
+</article>
+
+<article>
+<h3>間違い例</h3>
+<p>空いているケーブルを収めたつもりだったが、研究室がネットワークから切り離される（ことになっているが、、、）</p>
+<p><img src="images/loop1.png" class="three"></p>
+
+<p><img src="images/loop2.png" class="three"></p>
+
+</article>
+
+<article>
+<h3>自分 PC の IP アドレスを知れ。</h3>
+<p>自分PCのIPアドレスみると、
+<em> 自分PCが正しくルータの下に収まっているか、
+</em> 九工大ネットが毛嫌いする IPv6 は有効か、無効か
+を確認できる。</p>
+<p>Windows なら「コマンドプロンプト」開いて ipconfig。IPAddress の右。</p>
+<pre><code>&gt; ipconfig
+Ethernet adapter ローカルエリア接続:
+IP Address ............: 192.168.10.3
+Subnet Mask ...........: 255.255.255.0
+Default Gateway .......: 192.168.10.1
+</code></pre>
+<p>OSXやLinuxはターミナル開いて ifconfig。inet addr: の右が IP アドレス。</p>
+<pre><code>$ ifconfig
+eth0      Link encap:Ethernet  HWaddr 52:54:00:38:ce:ef
+          inet addr:10.0.3.24  Bcast:10.0.3.255  Mask:255.255.255.0
+          inet6 addr: fe80::5054:ff:fe38:ceef/64 Scope:Link
+          ...
+</code></pre>
+<p>ifconfig の例にある fe80: で始まるようなのが見えるときは IPv6 が有効になっている。</p>
+</article>
+
+<article>
+<h3>まとめ</h3>
+<ul>
+<li>知らずに使うな。</li>
+<li>ケーブルをあまく見るな。</li>
+<li>つながったからと安心するな。</li>
+<li>大学院生を信用するな。</li>
+<li>自分で考えろ。</li>
+</ul>
+<p><hr>
+written by hkimura.</p>
+</article>
+
+
+
+    </section>
+
+  </body>
+</html>
