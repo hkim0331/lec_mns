@@ -1,0 +1,17 @@
+rrabbit:~$ arp -a
+conny.mns.kyutech.ac.jp (150.69.84.221) at b8:27:eb:fb:49:df [ether] on eth0
+gw.mns.kyutech.ac.jp (150.69.84.254) at 08:5b:0e:5b:3d:96 [ether] on eth0
+150-69-84-120.mns.kyutech.ac.jp (150.69.84.120) at 10:6f:3f:6f:1e:49 [ether] on eth0
+okamoto-rt.mns.kyutech.ac.jp (150.69.84.242) at 00:a0:b0:6c:27:77 [ether] on eth0
+dhcp30.mns.kyutech.ac.jp (150.69.84.30) at 00:0a:79:60:f5:f3 [ether] on eth0
+150-69-84-139.mns.kyutech.ac.jp (150.69.84.139) at 00:a0:de:3e:93:19 [ether] on eth0
+dhcp37.mns.kyutech.ac.jp (150.69.84.37) at 00:3a:9d:20:ff:59 [ether] on eth0
+dhcp35.mns.kyutech.ac.jp (150.69.84.35) at 20:c9:d0:2a:c2:6b [ether] on eth0
+dhcp24.mns.kyutech.ac.jp (150.69.84.24) at 10:6f:3f:fc:b5:df [ether] on eth0
+hlab2.mns.kyutech.ac.jp (150.69.84.157) at 00:a0:b0:ed:d0:81 [ether] on eth0
+es1.mns.kyutech.ac.jp (150.69.84.201) at 00:17:cb:85:c6:81 [ether] on eth0
+150-69-84-112.mns.kyutech.ac.jp (150.69.84.112) at 00:10:38:13:b2:5d [ether] on eth0
+kamada-rt.mns.kyutech.ac.jp (150.69.84.212) at 00:26:87:04:2d:0f [ether] on eth0
+hemulen.mns.kyutech.ac.jp (150.69.84.155) at 68:05:ca:12:4d:5b [ether] on eth0
+jimu-ise.kyutech.ac.jp (150.69.84.244) at 00:90:cc:7f:5b:7b [ether] on eth0
+rabbit:~$
